@@ -1,0 +1,1911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediKiosk | AI-Powered Clinical Intake</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- =====================================================
+     BACKGROUND
+===================================================== -->
+
+<div class="background-grid"></div>
+<div class="particles" id="particles"></div>
+
+<!-- =====================================================
+     NAVBAR
+===================================================== -->
+
+<header class="navbar">
+
+    <div class="logo" onclick="showPage('home')">
+        <div class="logo-icon">✚</div>
+        <div>
+            <strong>MEDI<span>KIOSK</span></strong>
+            <small>AI HEALTHCARE</small>
+        </div>
+    </div>
+
+    <nav>
+        <a onclick="scrollToSection('home')">Home</a>
+        <a onclick="scrollToSection('how')">How It Works</a>
+        <a onclick="scrollToSection('features')">Features</a>
+        <a onclick="showPage('patient')">Patients</a>
+        <a onclick="showPage('doctor')">Doctors</a>
+        <a onclick="scrollToSection('ayush')">AYUSH</a>
+        <a onclick="scrollToSection('security')">Security</a>
+    </nav>
+
+    <div class="nav-actions">
+        <button class="btn ghost" onclick="showPage('patient')">
+            Patient Login
+        </button>
+
+        <button class="btn primary" onclick="showPage('doctor')">
+            Doctor Login
+        </button>
+    </div>
+
+    <button class="mobile-menu" onclick="toggleMenu()">☰</button>
+
+</header>
+
+
+<!-- =====================================================
+     HOME PAGE
+===================================================== -->
+
+<main id="homePage">
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="eyebrow">
+            <span class="pulse-dot"></span>
+            SMART INDIA HACKATHON 2026
+        </div>
+
+        <h1>
+            Your Medical History.
+            <span>Organized Before the Doctor.</span>
+        </h1>
+
+        <p class="hero-text">
+            An AI-powered clinical history and patient intake platform
+            that collects, understands and organizes patient information
+            before consultation.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="btn primary large"
+                    onclick="showPage('patient')">
+                Start Patient Intake →
+            </button>
+
+            <button class="btn glass large"
+                    onclick="startDemo()">
+                ▶ Try Interactive Demo
+            </button>
+
+        </div>
+
+        <div class="hero-note">
+            <span>✦</span>
+            AI assists. Doctors decide.
+        </div>
+
+    </div>
+
+
+    <!-- FUTURISTIC KIOSK -->
+
+    <div class="hero-visual">
+
+        <div class="orb orb-one"></div>
+        <div class="orb orb-two"></div>
+
+        <div class="kiosk">
+
+            <div class="kiosk-top">
+                <div class="camera"></div>
+
+                <div class="kiosk-brand">
+                    <span>✚</span>
+                    MEDIKIOSK
+                </div>
+
+                <div class="status">
+                    <span></span>
+                    ONLINE
+                </div>
+            </div>
+
+            <div class="kiosk-screen">
+
+                <div class="ai-face">
+                    <div class="brain">🧠</div>
+                </div>
+
+                <h3>Hello, I'm MediKiosk AI</h3>
+
+                <p>
+                    Let's organize your medical history
+                    before your consultation.
+                </p>
+
+                <div class="voice-circle">
+                    🎙
+                    <div class="wave"></div>
+                </div>
+
+                <div class="kiosk-options">
+                    <div>🎙 Speak</div>
+                    <div>⌨ Type</div>
+                </div>
+
+            </div>
+
+            <div class="kiosk-bottom">
+                <span>SECURE SESSION</span>
+                <span>● ENCRYPTED</span>
+            </div>
+
+        </div>
+
+
+        <!-- DATA FLOW -->
+
+        <div class="data-card card-patient">
+            👤 Patient
+            <span>→</span>
+        </div>
+
+        <div class="data-card card-ai">
+            🧠 AI Interview
+            <span>→</span>
+        </div>
+
+        <div class="data-card card-doctor">
+            👨‍⚕️ Doctor
+            <span>✓</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROCESS STRIP
+===================================================== -->
+
+<section class="process-strip">
+
+    <div>01 <strong>COLLECT</strong></div>
+    <span>→</span>
+
+    <div>02 <strong>UNDERSTAND</strong></div>
+    <span>→</span>
+
+    <div>03 <strong>ORGANIZE</strong></div>
+    <span>→</span>
+
+    <div>04 <strong>ALERT</strong></div>
+    <span>→</span>
+
+    <div>05 <strong>ASSIST</strong></div>
+
+</section>
+
+
+<!-- =====================================================
+     PROBLEM
+===================================================== -->
+
+<section class="section problem-section">
+
+    <div class="section-heading">
+
+        <div class="eyebrow">THE PROBLEM</div>
+
+        <h2>
+            Healthcare shouldn't start
+            with <span>repeating the same questions.</span>
+        </h2>
+
+        <p>
+            Hospitals handle large patient volumes while critical
+            information often remains scattered across conversations,
+            papers and old reports.
+        </p>
+
+    </div>
+
+
+    <div class="problem-grid">
+
+        <div class="glass-card problem-card">
+            <div class="card-icon">🏥</div>
+            <h3>High Patient Load</h3>
+            <p>
+                Crowded hospitals create pressure on doctors
+                and healthcare staff.
+            </p>
+        </div>
+
+        <div class="glass-card problem-card">
+            <div class="card-icon">⏱</div>
+            <h3>Time-Consuming Intake</h3>
+            <p>
+                Manual history-taking consumes valuable
+                consultation time.
+            </p>
+        </div>
+
+        <div class="glass-card problem-card">
+            <div class="card-icon">🔁</div>
+            <h3>Repetitive Questions</h3>
+            <p>
+                Patients repeatedly provide the same
+                information to different staff members.
+            </p>
+        </div>
+
+        <div class="glass-card problem-card">
+            <div class="card-icon">📄</div>
+            <h3>Scattered Records</h3>
+            <p>
+                Prescriptions and medical reports are often
+                stored as physical documents.
+            </p>
+        </div>
+
+        <div class="glass-card problem-card">
+            <div class="card-icon">✍</div>
+            <h3>Hard-to-Read Records</h3>
+            <p>
+                Handwritten records can be difficult to
+                quickly interpret.
+            </p>
+        </div>
+
+        <div class="glass-card problem-card">
+            <div class="card-icon">⚠</div>
+            <h3>Missed Information</h3>
+            <p>
+                Important history may not be immediately
+                visible during consultation.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SOLUTION
+===================================================== -->
+
+<section class="section solution-section">
+
+    <div class="section-heading center">
+
+        <div class="eyebrow">THE SOLUTION</div>
+
+        <h2>
+            Meet <span>MediKiosk</span>
+        </h2>
+
+        <p>
+            An intelligent patient intake layer between
+            the patient and the doctor.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid" id="features">
+
+        <div class="feature-card">
+            <span>🎙</span>
+            <h3>Voice + Text</h3>
+            <p>Patients can communicate naturally using voice or text.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>🧠</span>
+            <h3>Adaptive AI Questions</h3>
+            <p>Follow-up questions adapt to patient responses.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>📄</span>
+            <h3>OCR Documents</h3>
+            <p>Digitize prescriptions, reports and old records.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>📋</span>
+            <h3>AI Summary</h3>
+            <p>Create a concise doctor-ready clinical summary.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>⚠</span>
+            <h3>Priority Review</h3>
+            <p>Highlight information requiring clinical review.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>✓</span>
+            <h3>Doctor Verification</h3>
+            <p>Doctors confirm, edit or reject AI-generated information.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>🗓</span>
+            <h3>Medical Timeline</h3>
+            <p>Organize patient history chronologically.</p>
+        </div>
+
+        <div class="feature-card">
+            <span>🌿</span>
+            <h3>AYUSH Mode</h3>
+            <p>Structured information collection for AYUSH workflows.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     HOW IT WORKS
+===================================================== -->
+
+<section class="section" id="how">
+
+    <div class="section-heading center">
+
+        <div class="eyebrow">HOW IT WORKS</div>
+
+        <h2>
+            From patient story to
+            <span>structured record.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="workflow">
+
+        <div class="workflow-line"></div>
+
+        <div class="workflow-step">
+            <div class="step-number">01</div>
+            <h3>Register</h3>
+            <p>Patient registration and consent.</p>
+        </div>
+
+        <div class="workflow-step">
+            <div class="step-number">02</div>
+            <h3>Language</h3>
+            <p>Select preferred language.</p>
+        </div>
+
+        <div class="workflow-step">
+            <div class="step-number">03</div>
+            <h3>Interview</h3>
+            <p>Voice or text interaction.</p>
+        </div>
+
+        <div class="workflow-step">
+            <div class="step-number">04</div>
+            <h3>OCR</h3>
+            <p>Digitize old medical records.</p>
+        </div>
+
+        <div class="workflow-step">
+            <div class="step-number">05</div>
+            <h3>AI Processing</h3>
+            <p>Structure collected information.</p>
+        </div>
+
+        <div class="workflow-step">
+            <div class="step-number">06</div>
+            <h3>Review</h3>
+            <p>Doctor verifies the information.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     USP
+===================================================== -->
+
+<section class="usp-section">
+
+    <div class="usp-content">
+
+        <div class="eyebrow">CORE PHILOSOPHY</div>
+
+        <h2>
+            Collect Early.<br>
+            <span>Organize with AI.</span><br>
+            Verify Clinically.<br>
+            Care Better.
+        </h2>
+
+        <p>
+            MediKiosk collects the patient's story before
+            the doctor has to ask for it.
+        </p>
+
+        <div class="philosophy">
+            <span>AI assists.</span>
+            <span>Information is organized.</span>
+            <strong>Doctors decide.</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     AYUSH
+===================================================== -->
+
+<section class="section ayush-section" id="ayush">
+
+    <div class="ayush-content">
+
+        <div>
+            <div class="eyebrow">HEALTHCARE + AYUSH</div>
+
+            <h2>
+                Modern clinical intake
+                meets <span>AYUSH.</span>
+            </h2>
+
+            <p>
+                MediKiosk can structure AYUSH-specific patient
+                information while keeping clinical decisions
+                under professional supervision.
+            </p>
+
+            <button class="btn primary"
+                    onclick="showAyush()">
+                Explore AYUSH Mode →
+            </button>
+        </div>
+
+
+        <div class="ayush-orb">
+
+            <div class="ayush-inner">
+                🌿
+            </div>
+
+            <div class="ayush-ring"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SECURITY
+===================================================== -->
+
+<section class="section security-section" id="security">
+
+    <div class="section-heading center">
+
+        <div class="eyebrow">SECURITY & PRIVACY</div>
+
+        <h2>
+            Healthcare data deserves
+            <span>healthcare-grade privacy.</span>
+        </h2>
+
+    </div>
+
+
+    <div class="security-grid">
+
+        <div class="security-card">
+            🔐
+            <h3>Consent</h3>
+            <p>Patient-controlled information sharing.</p>
+        </div>
+
+        <div class="security-card">
+            🛡
+            <h3>Role-Based Access</h3>
+            <p>Different access levels for patients, doctors and admins.</p>
+        </div>
+
+        <div class="security-card">
+            🔒
+            <h3>Encryption</h3>
+            <p>Secure architecture for healthcare information.</p>
+        </div>
+
+        <div class="security-card">
+            📜
+            <h3>Audit Logs</h3>
+            <p>Track important system actions.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ABOUT
+===================================================== -->
+
+<section class="section about-section">
+
+    <div class="section-heading center">
+
+        <div class="eyebrow">ABOUT MEDIKIOSK</div>
+
+        <h2>
+            Improving the
+            <span>first mile of healthcare.</span>
+        </h2>
+
+        <p>
+            MediKiosk is designed to collect and organize patient
+            information before consultation, helping patients,
+            doctors and hospitals.
+        </p>
+
+    </div>
+
+
+    <div class="benefits-grid">
+
+        <div>
+            <h3>FOR PATIENTS</h3>
+            <ul>
+                <li>✓ Easy interaction</li>
+                <li>✓ Multilingual voice/text</li>
+                <li>✓ Complete history</li>
+                <li>✓ Records in one place</li>
+                <li>✓ Faster intake</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>FOR DOCTORS</h3>
+            <ul>
+                <li>✓ Structured history</li>
+                <li>✓ Easier review</li>
+                <li>✓ Previous records</li>
+                <li>✓ Priority awareness</li>
+                <li>✓ Doctor remains in control</li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>FOR HOSPITALS</h3>
+            <ul>
+                <li>✓ Reduced repetitive workload</li>
+                <li>✓ Faster patient flow</li>
+                <li>✓ Digital records</li>
+                <li>✓ Better organization</li>
+                <li>✓ Improved efficiency</li>
+            </ul>
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =====================================================
+     PATIENT APPLICATION
+===================================================== -->
+
+<section class="app-page" id="patientPage">
+
+    <div class="app-header">
+
+        <button class="back-btn" onclick="showPage('home')">
+            ← Home
+        </button>
+
+        <div class="app-logo">
+            ✚ MEDIKIOSK
+        </div>
+
+        <div class="demo-badge">
+            DEMO MODE
+        </div>
+
+    </div>
+
+
+    <div class="patient-container">
+
+        <!-- PROGRESS -->
+
+        <div class="progress-container">
+
+            <div class="progress-label">
+                <span id="patientStepText">
+                    Step 1 of 8
+                </span>
+
+                <span id="patientProgressText">
+                    12%
+                </span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="patientProgress"></div>
+            </div>
+
+        </div>
+
+
+        <!-- PATIENT STEPS -->
+
+        <div id="patientSteps">
+
+
+            <!-- STEP 1 -->
+
+            <div class="patient-step active" data-step="1">
+
+                <div class="step-icon">👤</div>
+
+                <h1>Let's get to know you.</h1>
+
+                <p class="subtext">
+                    Enter a few basic details to begin your intake.
+                </p>
+
+                <div class="form-grid">
+
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input id="patientName"
+                               placeholder="Enter your name">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Age</label>
+                        <input id="patientAge"
+                               type="number"
+                               placeholder="Age">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Gender</label>
+
+                        <select id="patientGender">
+                            <option value="">Select</option>
+                            <option>Female</option>
+                            <option>Male</option>
+                            <option>Other</option>
+                            <option>Prefer not to say</option>
+                        </select>
+
+                    </div>
+
+                    <div class="input-group">
+                        <label>Phone Number</label>
+                        <input id="patientPhone"
+                               placeholder="+91 XXXXX XXXXX">
+                    </div>
+
+                    <div class="input-group">
+                        <label>Patient ID</label>
+
+                        <input value="MED-DEMO-1001"
+                               disabled>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Preferred Language</label>
+
+                        <select id="patientLanguage">
+                            <option>English</option>
+                            <option>Hindi</option>
+                            <option>Bengali</option>
+                            <option>Punjabi</option>
+                            <option>Tamil</option>
+                            <option>Telugu</option>
+                            <option>Marathi</option>
+                            <option>Gujarati</option>
+                            <option>Kannada</option>
+                            <option>Malayalam</option>
+                            <option>Odia</option>
+                        </select>
+
+                    </div>
+
+                </div>
+
+                <button class="btn primary large"
+                        onclick="nextPatientStep()">
+                    Continue →
+                </button>
+
+            </div>
+
+
+            <!-- STEP 2 CONSENT -->
+
+            <div class="patient-step" data-step="2">
+
+                <div class="step-icon">🔐</div>
+
+                <h1>Your Privacy Matters.</h1>
+
+                <p class="subtext">
+                    Please review how MediKiosk uses your information.
+                </p>
+
+                <div class="consent-card">
+
+                    <div>✓ Your information is collected for patient intake.</div>
+                    <div>✓ Information is organized to assist the doctor.</div>
+                    <div>✓ AI assists with structuring information.</div>
+                    <div>✓ AI does not make the final clinical decision.</div>
+                    <div>✓ The doctor remains responsible for clinical decisions.</div>
+
+                </div>
+
+                <button class="btn primary large"
+                        onclick="nextPatientStep()">
+                    I Agree & Continue →
+                </button>
+
+            </div>
+
+
+            <!-- STEP 3 LANGUAGE -->
+
+            <div class="patient-step" data-step="3">
+
+                <div class="step-icon">🌐</div>
+
+                <h1>Choose your language.</h1>
+
+                <p class="subtext">
+                    You can change this later.
+                </p>
+
+                <div class="language-grid">
+
+                    <button onclick="selectLanguage(this)">English</button>
+                    <button onclick="selectLanguage(this)">हिन्दी</button>
+                    <button onclick="selectLanguage(this)">বাংলা</button>
+                    <button onclick="selectLanguage(this)">ਪੰਜਾਬੀ</button>
+                    <button onclick="selectLanguage(this)">தமிழ்</button>
+                    <button onclick="selectLanguage(this)">తెలుగు</button>
+                    <button onclick="selectLanguage(this)">मराठी</button>
+                    <button onclick="selectLanguage(this)">ગુજરાતી</button>
+                    <button onclick="selectLanguage(this)">ಕನ್ನಡ</button>
+                    <button onclick="selectLanguage(this)">മലയാളം</button>
+                    <button onclick="selectLanguage(this)">ଓଡ଼ିଆ</button>
+
+                </div>
+
+                <button class="btn primary large"
+                        onclick="nextPatientStep()">
+                    Continue →
+                </button>
+
+            </div>
+
+
+            <!-- STEP 4 INTERVIEW -->
+
+            <div class="patient-step" data-step="4">
+
+                <div class="interview-header">
+
+                    <div class="ai-avatar">🧠</div>
+
+                    <div>
+                        <small>MEDIKIOSK AI</small>
+                        <h2>Clinical History</h2>
+                    </div>
+
+                    <div class="ai-status">
+                        ● DEMO AI
+                    </div>
+
+                </div>
+
+
+                <div class="chat-box" id="chatBox">
+
+                    <div class="message ai">
+                        <span>AI</span>
+                        What brings you to the doctor today?
+                    </div>
+
+                </div>
+
+
+                <div class="voice-interface">
+
+                    <button id="micButton"
+                            class="mic-button"
+                            onclick="simulateVoice()">
+                        🎙
+                    </button>
+
+                    <div class="voice-status"
+                         id="voiceStatus">
+                        Tap microphone to speak
+                    </div>
+
+                </div>
+
+
+                <div class="text-input-area">
+
+                    <input id="chatInput"
+                           placeholder="Type your answer...">
+
+                    <button class="btn primary"
+                            onclick="sendChat()">
+                        Send
+                    </button>
+
+                </div>
+
+
+                <div class="history-progress">
+
+                    <div class="progress-label">
+                        <span>Clinical History</span>
+                        <strong id="historyPercent">20%</strong>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="historyProgress"
+                             style="width:20%">
+                        </div>
+                    </div>
+
+                    <div class="collected">
+
+                        <span>✓ Chief complaint</span>
+                        <span>✓ Symptoms</span>
+                        <span>○ Duration</span>
+                        <span>○ Medicines</span>
+                        <span>○ Allergies</span>
+
+                    </div>
+
+                </div>
+
+                <button class="btn primary large"
+                        onclick="nextPatientStep()">
+                    Complete Interview →
+                </button>
+
+            </div>
+
+
+            <!-- STEP 5 DOCUMENT -->
+
+            <div class="patient-step" data-step="5">
+
+                <div class="step-icon">📄</div>
+
+                <h1>Digitize your medical records.</h1>
+
+                <p class="subtext">
+                    Upload an old prescription, report or medical document.
+                </p>
+
+
+                <div class="upload-area"
+                     id="uploadArea"
+                     onclick="document.getElementById('fileInput').click()">
+
+                    <div class="upload-icon">☁</div>
+
+                    <h3>Drop your document here</h3>
+
+                    <p>or click to browse</p>
+
+                    <small>
+                        Prescription • Blood Report • Lab Report • X-Ray • MRI
+                    </small>
+
+                    <input type="file"
+                           id="fileInput"
+                           hidden
+                           onchange="simulateOCR(this)">
+
+                </div>
+
+
+                <div id="ocrLoading"
+                     class="ocr-loading hidden">
+
+                    <div class="scanner"></div>
+
+                    <h3 id="ocrStatus">
+                        SCANNING...
+                    </h3>
+
+                    <div class="ocr-steps">
+                        <span>✓ Detecting text</span>
+                        <span>✓ Extracting information</span>
+                        <span>✓ Organizing record</span>
+                    </div>
+
+                </div>
+
+
+                <button class="btn primary large"
+                        onclick="showOCRResult()">
+                    Continue →
+                </button>
+
+            </div>
+
+
+            <!-- STEP 6 OCR -->
+
+            <div class="patient-step" data-step="6">
+
+                <div class="step-icon">🔎</div>
+
+                <h1>OCR Extraction Result</h1>
+
+                <p class="subtext">
+                    Review information extracted from your document.
+                </p>
+
+                <div class="verification-warning">
+                    ⚠ AI Extracted — Requires Verification
+                </div>
+
+                <div class="ocr-result">
+
+                    <div>
+                        <label>Document Type</label>
+                        <strong>Medical Report</strong>
+                    </div>
+
+                    <div>
+                        <label>Date</label>
+                        <strong>12 Aug 2026</strong>
+                    </div>
+
+                    <div>
+                        <label>Condition / Information</label>
+                        <strong>Example clinical information</strong>
+                    </div>
+
+                    <div>
+                        <label>Medicine</label>
+                        <strong>Example Medicine</strong>
+                    </div>
+
+                    <div>
+                        <label>Dosage</label>
+                        <strong>Example Dosage</strong>
+                    </div>
+
+                    <div>
+                        <label>Test</label>
+                        <strong>Example Test</strong>
+                    </div>
+
+                    <div>
+                        <label>Doctor Notes</label>
+                        <strong>Example notes extracted from document</strong>
+                    </div>
+
+                </div>
+
+                <div class="action-row">
+
+                    <button class="btn ghost"
+                            onclick="editOCR()">
+                        ✏ Edit
+                    </button>
+
+                    <button class="btn primary"
+                            onclick="confirmOCR()">
+                        ✓ Confirm
+                    </button>
+
+                    <button class="btn danger"
+                            onclick="rejectOCR()">
+                        ✕ Reject
+                    </button>
+
+                </div>
+
+                <button class="btn primary large"
+                        onclick="nextPatientStep()">
+                    Save Record & Continue →
+                </button>
+
+            </div>
+
+
+            <!-- STEP 7 SUMMARY -->
+
+            <div class="patient-step" data-step="7">
+
+                <div class="step-icon">🧠</div>
+
+                <h1>AI Clinical Summary</h1>
+
+                <div class="ai-label">
+                    ✦ AI Generated • Doctor Verification Required
+                </div>
+
+                <div class="summary-card">
+
+                    <div class="summary-section">
+                        <h3>Patient Information</h3>
+                        <p id="summaryName">Demo Patient</p>
+                    </div>
+
+                    <div class="summary-section">
+                        <h3>Chief Complaint</h3>
+                        <p>Reported symptoms during patient interview.</p>
+                    </div>
+
+                    <div class="summary-section">
+                        <h3>History of Present Illness</h3>
+                        <p>
+                            Information collected through adaptive
+                            AI-guided interview.
+                        </p>
+                    </div>
+
+                    <div class="summary-section">
+                        <h3>Current Medications</h3>
+                        <p>Information requires clinical verification.</p>
+                    </div>
+
+                    <div class="summary-section">
+                        <h3>Allergies</h3>
+                        <p>Not confirmed.</p>
+                    </div>
+
+                    <div class="summary-section">
+                        <h3>Previous Reports</h3>
+                        <p>1 document digitally processed.</p>
+                    </div>
+
+                </div>
+
+                <button class="btn primary large"
+                        onclick="nextPatientStep()">
+                    Check Priority Status →
+                </button>
+
+            </div>
+
+
+            <!-- STEP 8 RED FLAG -->
+
+            <div class="patient-step" data-step="8">
+
+                <div class="priority-card">
+
+                    <div class="priority-icon">
+                        ⚠
+                    </div>
+
+                    <div class="priority-badge">
+                        PRIORITY REVIEW
+                    </div>
+
+                    <h1>Information Requiring Clinical Review</h1>
+
+                    <p>
+                        Certain reported information meets predefined
+                        warning criteria and should receive priority
+                        clinical review.
+                    </p>
+
+                    <div class="priority-action">
+                        <strong>Action</strong>
+                        <span>Priority Clinical Review</span>
+                    </div>
+
+                    <button class="btn danger large"
+                            onclick="notifyStaff()">
+                        Notify Hospital Staff
+                    </button>
+
+                </div>
+
+                <button class="btn primary large"
+                        onclick="submitPatient()">
+                    Send to Doctor →
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     DOCTOR DASHBOARD
+===================================================== -->
+
+<section class="dashboard-page" id="doctorPage">
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            ✚ <span>MEDIKIOSK</span>
+        </div>
+
+        <div class="doctor-profile">
+            <div class="doctor-avatar">DR</div>
+
+            <div>
+                <strong>Dr. Demo</strong>
+                <small>General Medicine</small>
+            </div>
+        </div>
+
+        <nav class="side-nav">
+
+            <a class="active" onclick="doctorView('dashboard')">
+                ◉ Dashboard
+            </a>
+
+            <a onclick="doctorView('queue')">
+                👥 Patient Queue
+            </a>
+
+            <a onclick="doctorView('patients')">
+                🧑 Patients
+            </a>
+
+            <a onclick="doctorView('summaries')">
+                🧠 AI Summaries
+            </a>
+
+            <a onclick="doctorView('alerts')">
+                ⚠ Red-Flag Alerts
+            </a>
+
+            <a onclick="doctorView('records')">
+                📄 Medical Records
+            </a>
+
+            <a onclick="doctorView('ayush')">
+                🌿 AYUSH
+            </a>
+
+            <a onclick="doctorView('notes')">
+                📝 Clinical Notes
+            </a>
+
+            <a onclick="doctorView('analytics')">
+                📊 Analytics
+            </a>
+
+        </nav>
+
+        <button class="logout-btn"
+                onclick="showPage('home')">
+            ← Exit Dashboard
+        </button>
+
+    </aside>
+
+
+    <div class="dashboard-main">
+
+        <header class="dashboard-header">
+
+            <div>
+                <div class="eyebrow">DOCTOR DASHBOARD</div>
+                <h1 id="dashboardTitle">
+                    Good evening, Doctor.
+                </h1>
+            </div>
+
+            <div class="dashboard-actions">
+
+                <div class="search-box">
+                    🔍
+                    <input id="patientSearch"
+                           placeholder="Search patient..."
+                           oninput="searchPatients()">
+                </div>
+
+                <button class="notification"
+                        onclick="showNotifications()">
+                    🔔
+                    <span>3</span>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- DASHBOARD CONTENT -->
+
+        <div id="doctorContent">
+
+            <div class="stat-grid">
+
+                <div class="stat-card">
+                    <span>Patients Today</span>
+                    <strong data-count="48">0</strong>
+                    <small>↑ 12% from yesterday</small>
+                </div>
+
+                <div class="stat-card">
+                    <span>AI Interviews</span>
+                    <strong data-count="37">0</strong>
+                    <small>78% of patients</small>
+                </div>
+
+                <div class="stat-card">
+                    <span>Records Digitized</span>
+                    <strong data-count="126">0</strong>
+                    <small>↑ 21 today</small>
+                </div>
+
+                <div class="stat-card alert-stat">
+                    <span>Priority Alerts</span>
+                    <strong data-count="4">0</strong>
+                    <small>Requires review</small>
+                </div>
+
+                <div class="stat-card">
+                    <span>Avg Intake Time</span>
+                    <strong>06:42</strong>
+                    <small>↓ 32% faster</small>
+                </div>
+
+                <div class="stat-card">
+                    <span>Ready for Consultation</span>
+                    <strong data-count="12">0</strong>
+                    <small>Waiting</small>
+                </div>
+
+            </div>
+
+
+            <div class="dashboard-grid">
+
+                <div class="dashboard-panel">
+
+                    <div class="panel-header">
+                        <div>
+                            <div class="eyebrow">LIVE</div>
+                            <h2>Patient Queue</h2>
+                        </div>
+
+                        <button class="btn small ghost"
+                                onclick="doctorView('queue')">
+                            View All →
+                        </button>
+                    </div>
+
+                    <div class="patient-table">
+
+                        <div class="table-head">
+                            <span>Patient</span>
+                            <span>ID</span>
+                            <span>Status</span>
+                            <span>Priority</span>
+                            <span>Action</span>
+                        </div>
+
+                        <div class="patient-row"
+                             data-name="Demo Patient 01">
+
+                            <div class="patient-name">
+                                <div class="mini-avatar">01</div>
+                                <strong>Demo Patient 01</strong>
+                            </div>
+
+                            <span>MED-1001</span>
+
+                            <span class="status ready">
+                                Ready
+                            </span>
+
+                            <span class="priority yellow">
+                                Needs Review
+                            </span>
+
+                            <button class="view-btn"
+                                    onclick="openPatient()">
+                                View →
+                            </button>
+
+                        </div>
+
+
+                        <div class="patient-row"
+                             data-name="Demo Patient 02">
+
+                            <div class="patient-name">
+                                <div class="mini-avatar">02</div>
+                                <strong>Demo Patient 02</strong>
+                            </div>
+
+                            <span>MED-1002</span>
+
+                            <span class="status processing">
+                                Processing
+                            </span>
+
+                            <span class="priority normal">
+                                Normal
+                            </span>
+
+                            <button class="view-btn"
+                                    onclick="openPatient()">
+                                View →
+                            </button>
+
+                        </div>
+
+
+                        <div class="patient-row"
+                             data-name="Demo Patient 03">
+
+                            <div class="patient-name">
+                                <div class="mini-avatar">03</div>
+                                <strong>Demo Patient 03</strong>
+                            </div>
+
+                            <span>MED-1003</span>
+
+                            <span class="status ready">
+                                Ready
+                            </span>
+
+                            <span class="priority red">
+                                Priority
+                            </span>
+
+                            <button class="view-btn"
+                                    onclick="openPatient()">
+                                View →
+                            </button>
+
+                        </div>
+
+
+                        <div class="patient-row"
+                             data-name="Demo Patient 04">
+
+                            <div class="patient-name">
+                                <div class="mini-avatar">04</div>
+                                <strong>Demo Patient 04</strong>
+                            </div>
+
+                            <span>MED-1004</span>
+
+                            <span class="status completed">
+                                Completed
+                            </span>
+
+                            <span class="priority normal">
+                                Normal
+                            </span>
+
+                            <button class="view-btn"
+                                    onclick="openPatient()">
+                                View →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ALERT -->
+
+                <div class="dashboard-panel alert-panel">
+
+                    <div class="panel-header">
+                        <h2>Priority Review</h2>
+                        <span class="live-dot"></span>
+                    </div>
+
+                    <div class="alert-box">
+
+                        <div class="alert-symbol">⚠</div>
+
+                        <div>
+                            <span class="priority red">
+                                PRIORITY
+                            </span>
+
+                            <h3>Demo Patient 03</h3>
+
+                            <p>
+                                Information requiring priority
+                                clinical review.
+                            </p>
+
+                            <button class="btn small danger"
+                                    onclick="openPatient()">
+                                Review Patient
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="alert-box yellow-box">
+
+                        <div class="alert-symbol">!</div>
+
+                        <div>
+                            <span class="priority yellow">
+                                NEEDS REVIEW
+                            </span>
+
+                            <h3>Demo Patient 01</h3>
+
+                            <p>
+                                AI-generated information requires
+                                doctor verification.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI SUMMARY -->
+
+            <div class="dashboard-panel ai-summary-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <div class="eyebrow">AI ASSISTED</div>
+                        <h2>Doctor-Ready Summary</h2>
+                    </div>
+
+                    <span class="ai-label">
+                        AI Generated
+                    </span>
+
+                </div>
+
+
+                <div class="summary-preview">
+
+                    <div class="summary-patient">
+
+                        <div class="large-avatar">
+                            01
+                        </div>
+
+                        <div>
+                            <h3>Demo Patient 01</h3>
+                            <p>
+                                MED-1001 • Adult • English
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-info">
+
+                        <div>
+                            <label>Chief Complaint</label>
+                            <p>
+                                Reported symptoms during intake.
+                            </p>
+                        </div>
+
+                        <div>
+                            <label>Current Symptoms</label>
+                            <p>
+                                Information collected through
+                                AI-guided interview.
+                            </p>
+                        </div>
+
+                        <div>
+                            <label>Documents</label>
+                            <p>1 report digitized</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="verification-bar">
+
+                    <span>
+                        AI Generated
+                    </span>
+
+                    <span>→</span>
+
+                    <span>
+                        Doctor Reviewed
+                    </span>
+
+                    <span>→</span>
+
+                    <strong>
+                        Verification Required
+                    </strong>
+
+                </div>
+
+                <div class="verification-actions">
+
+                    <button class="btn ghost"
+                            onclick="rejectAI()">
+                        ✕ Reject
+                    </button>
+
+                    <button class="btn glass"
+                            onclick="editAI()">
+                        ✏ Edit
+                    </button>
+
+                    <button class="btn primary"
+                            onclick="verifyAI()">
+                        ✓ Confirm & Verify
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     PATIENT PROFILE MODAL
+===================================================== -->
+
+<div class="modal" id="patientModal">
+
+    <div class="modal-box large-modal">
+
+        <button class="modal-close"
+                onclick="closeModal('patientModal')">
+            ×
+        </button>
+
+        <div class="modal-header">
+
+            <div class="large-avatar">
+                01
+            </div>
+
+            <div>
+                <div class="eyebrow">PATIENT PROFILE</div>
+                <h2>Demo Patient 01</h2>
+                <p>MED-1001 • Ready for Doctor</p>
+            </div>
+
+        </div>
+
+
+        <div class="profile-tabs">
+
+            <button class="active"
+                    onclick="profileTab('overview',this)">
+                Overview
+            </button>
+
+            <button onclick="profileTab('timeline',this)">
+                Timeline
+            </button>
+
+            <button onclick="profileTab('summary',this)">
+                AI Summary
+            </button>
+
+            <button onclick="profileTab('documents',this)">
+                Documents
+            </button>
+
+            <button onclick="profileTab('ayush',this)">
+                AYUSH
+            </button>
+
+        </div>
+
+
+        <div id="profileContent">
+
+            <div class="profile-grid">
+
+                <div class="profile-info-card">
+
+                    <h3>Patient Information</h3>
+
+                    <div class="info-row">
+                        <span>Name</span>
+                        <strong>Demo Patient 01</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Age</span>
+                        <strong>34</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Gender</span>
+                        <strong>Female</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Language</span>
+                        <strong>English</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="profile-info-card">
+
+                    <h3>Current Information</h3>
+
+                    <div class="info-row">
+                        <span>Chief Complaint</span>
+                        <strong>Reported symptoms</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Medication</span>
+                        <strong>Requires verification</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Allergies</span>
+                        <strong>Not confirmed</strong>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Documents</span>
+                        <strong>1</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="verification-section">
+
+                <div class="verification-title">
+                    <span class="ai-label">
+                        ✦ AI Generated
+                    </span>
+
+                    <span class="verify-status">
+                        Doctor Verification Required
+                    </span>
+                </div>
+
+                <textarea id="doctorEdit"
+                          placeholder="AI-generated information...">
+AI-assisted summary of patient information collected during intake.
+Doctor should review and verify the accuracy before clinical use.
+                </textarea>
+
+                <div class="verification-actions">
+
+                    <button class="btn danger"
+                            onclick="rejectAI()">
+                        ✕ Reject
+                    </button>
+
+                    <button class="btn glass"
+                            onclick="editAI()">
+                        ✏ Save Edit
+                    </button>
+
+                    <button class="btn primary"
+                            onclick="verifyAI()">
+                        ✓ Confirm Verified
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="doctor-notes">
+
+                <h3>Clinical Notes</h3>
+
+                <div class="notes-grid">
+
+                    <textarea placeholder="Clinical Notes"></textarea>
+
+                    <textarea placeholder="Assessment"></textarea>
+
+                    <textarea placeholder="Plan"></textarea>
+
+                    <textarea placeholder="Follow-up"></textarea>
+
+                </div>
+
+                <button class="btn primary"
+                        onclick="saveNotes()">
+                    Save Clinical Notes
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     PRESENTATION MODE
+===================================================== -->
+
+<div class="presentation-mode"
+     id="presentationMode">
+
+    <button onclick="closePresentation()">×</button>
+
+    <div class="presentation-content">
+
+        <div class="eyebrow">
+            SMART INDIA HACKATHON 2026
+        </div>
+
+        <h1 id="presentationTitle">
+            MEDIKIOSK
+        </h1>
+
+        <p id="presentationText">
+            AI-Powered Clinical History & Patient Intake
+        </p>
+
+        <div class="presentation-progress">
+            <div id="presentationProgress"></div>
+        </div>
+
+        <div class="presentation-controls">
+
+            <button onclick="presentationPrev()">
+                ←
+            </button>
+
+            <span id="presentationCounter">
+                1 / 11
+            </span>
+
+            <button onclick="presentationNext()">
+                →
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div class="toast"
+     id="toast">
+
+    <span id="toastIcon">✓</span>
+
+    <div>
+        <strong id="toastTitle">Success</strong>
+        <p id="toastMessage">Action completed.</p>
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+    <div class="footer-main">
+
+        <div class="logo">
+            <div class="logo-icon">✚</div>
+
+            <div>
+                <strong>MEDIKIOSK</strong>
+                <small>AI HEALTHCARE</small>
+            </div>
+        </div>
+
+        <p>
+            Better Information → Better Decisions →
+            Better Care → Better Lives
+        </p>
+
+    </div>
+
+    <div class="footer-bottom">
+
+        <span>
+            Smart India Hackathon 2026
+        </span>
+
+        <span>
+            Team Code-Z
+        </span>
+
+        <span>
+            AI assists. Doctors decide.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
